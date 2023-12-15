@@ -20,7 +20,7 @@ const linkedin = `${iconUrl}/linkedin.svg`;
 const summiz = `${iconUrl}/summiz.svg`;
 const arrow = `${iconUrl}/arrow.svg`;
 const contact = `${iconUrl}/contact.svg`;
-
+const pointright = `${iconUrl}/pointright.png`;
 
 export {
     css,
@@ -43,4 +43,5 @@ export {
     summiz,
     arrow,
     contact,
+    pointright
 }
