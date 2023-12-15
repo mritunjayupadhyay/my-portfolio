@@ -1,4 +1,4 @@
-import { Inter, Poppins, Work_Sans } from 'next/font/google'
+import { Poppins, Work_Sans } from 'next/font/google'
 
 const poppins = Poppins({ 
     variable: '--font-poppins',
