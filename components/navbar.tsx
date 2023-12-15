@@ -1,7 +1,6 @@
 "use client"
 import Link from 'next/link';
 
-import { logo } from "../app/assets/images/index";
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {

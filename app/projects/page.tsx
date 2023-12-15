@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 import CTA from "../../components/cta";
-import { projects } from "../app.constant";
+import { projects } from '@/app.constant';
+import { arrow } from '@/assets/icons';
 
-import { arrow } from "../assets/icons";
 
 const Projects = () => {
   return (

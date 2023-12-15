@@ -5,7 +5,7 @@ import {
   } from "react-vertical-timeline-component";
   
 import CTA from "../../components/cta";
-  import { experiences, skills } from "../app.constant";
+  import { experiences, skills } from "../../app.constant";
   import "react-vertical-timeline-component/style.min.css";
 
 export default function About() {
@@ -30,7 +30,7 @@ export default function About() {
           <div className='py-10 flex flex-col'>
             <h3 className='subhead-text'>My Skills</h3>
     
-            <div className='mt-16 flex flex-wrap gap-12'>
+            <div className='mt-16 flex flex-wrap gap-12 justify-around sm:justify-start'>
               {skills.map((skill) => (
                 <div className='block-container w-20 h-20' key={skill.name}>
                   <div className='btn-back rounded-xl' />

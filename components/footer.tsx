@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { socialLinks } from "../app/app.constant";
+import { socialLinks } from "../app.constant";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
 
       <div className='footer-container'>
         <p>
-          Made with Javascript Mastery. <strong>Find me here</strong>
+        Find me here. <strong></strong>
         </p>
 
         <div className='flex gap-3 justify-center items-center'>
