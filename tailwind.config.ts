@@ -25,7 +25,8 @@ const config: Config = {
         poppins: ['Poppins', "sans-serif"]
       },
       boxShadow: {
-        card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)'
+        card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)',
+        highlight: 'inset 0 -3px 0 #007bff'
       }
     },
   },
