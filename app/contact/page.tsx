@@ -1,12 +1,15 @@
+"use client";
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
 
-import { Fox } from "../models";
+import { Fox } from "../../models/fox";
 import useAlert from "../../hooks/useAlert";
+import Loader from "@/components/loader";
+import Alert from "@/components/alert";
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
@@ -19,15 +22,15 @@ const handleChange = ({ target: { name, value } }: { target: { name: string, val
   const handleFocus = () => setCurrentAnimation("walk");
   const handleBlur = () => setCurrentAnimation("idle");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     setLoading(true);
     setCurrentAnimation("hit");
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
         {
           from_name: form.name,
           to_name: "Mritunjay Upadhyay",
@@ -35,26 +38,25 @@ const handleChange = ({ target: { name, value } }: { target: { name: string, val
           to_email: "mupadhyay00@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
       )
       .then(
         () => {
           setLoading(false);
           showAlert({
-            show: true,
             text: "Thank you for your message 😃",
             type: "success",
           });
 
           setTimeout(() => {
-            hideAlert(false);
+            hideAlert();
             setCurrentAnimation("idle");
             setForm({
               name: "",
               email: "",
               message: "",
             });
-          }, [3000]);
+          }, 3000);
         },
         (error) => {
           setLoading(false);
@@ -62,7 +64,6 @@ const handleChange = ({ target: { name, value } }: { target: { name: string, val
           setCurrentAnimation("idle");
 
           showAlert({
-            show: true,
             text: "I didn't receive your message 😢",
             type: "danger",
           });
@@ -114,7 +115,7 @@ const handleChange = ({ target: { name, value } }: { target: { name: string, val
             Your Message
             <textarea
               name='message'
-              rows='4'
+              rows={4}
               className='textarea'
               placeholder='Write your thoughts here...'
               value={form.message}
@@ -156,12 +157,9 @@ const handleChange = ({ target: { name, value } }: { target: { name: string, val
           />
 
           <Suspense fallback={<Loader />}>
-            <Fox
+            {/* <Fox
               currentAnimation={currentAnimation}
-              position={[0.5, 0.35, 0]}
-              rotation={[12.629, -0.6, 0]}
-              scale={[0.5, 0.5, 0.5]}
-            />
+            /> */}
           </Suspense>
         </Canvas>
       </div>
