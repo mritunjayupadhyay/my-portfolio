@@ -5,6 +5,8 @@ import { poppins, workSans } from '@/fonts';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: 'Portfolio',
   description: 'Portfolio of Mritunjay Upadhyay',
