@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
 
-import { Fox } from "../../models/fox";
 import useAlert from "../../hooks/useAlert";
 import Loader from "@/components/loader";
 import Alert from "@/components/alert";
