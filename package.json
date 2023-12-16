@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format:check": "npm run prettier . --check",
+    "format:write": "npm run prettier . --write"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

@@ -12,7 +12,7 @@ export default function About() {
     return (
         <section className='max-container'>
           <h1 className='head-text'>
-            Hello, I'm{" "}
+            Hello, I&apos;m{" "}
             <span className='blue-gradient_text font-semibold drop-shadow'>
               {" "}
               Mritunjay

@@ -20,7 +20,7 @@ export default function Home() {
                 </h1>
 
                 <h2 className="head-text-light max-w-screen-sm">
-                    I'm
+                    I&apos;m
                     <span className="pl-2 blue-gradient_text font-semibold drop-shadow">Mritunjay Upadhyay</span>, 
                     a full stack engineer dedicated to developing and optimizing interactive, 
                     user-friendly, and feature-rich applications.
