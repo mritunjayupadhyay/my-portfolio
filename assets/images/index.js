@@ -7,6 +7,7 @@ const jagota = `${imageUrl}/jagota.png`;
 const propertyscout = `${imageUrl}/property-scout.svg`;
 const udemy = `${imageUrl}/udemy.png`;
 const chess = `${imageUrl}/chess.png`;
+const chat = `${imageUrl}/chat.png`;
 const onlineExam = `${imageUrl}/online-test.png`;
 const traveler = `${imageUrl}/traveler.png`;
 export {
@@ -17,6 +18,7 @@ export {
     propertyscout,
     udemy,
     chess,
+    chat,
     onlineExam,
     traveler
 }

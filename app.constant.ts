@@ -1,5 +1,5 @@
 import { jagota, propertyscout, quadtrust, bchurunway, 
-    udemy, chess, onlineExam, traveler } from "./assets/images";
+    udemy, chess, onlineExam, traveler, chat } from "./assets/images";
 import {
     contact,
     css,
@@ -182,6 +182,13 @@ export const socialLinks = [
 
 export const projects = [
     {
+        iconUrl: chat,
+        theme: 'btn-back-yellow',
+        name: 'Realtime Chat App',
+        description: 'The Chat App Frontend is built using modern web technologies to create a responsive and interactive user interface for a chat application.',
+        link: 'https://chat.mjcodes.dev/',
+    },
+    {
         iconUrl: chess,
         theme: 'btn-back-red',
         name: 'Chess App',
@@ -189,18 +196,11 @@ export const projects = [
         link: 'https://chess.mjcodes.dev/',
     },
     {
-        iconUrl: udemy,
-        theme: 'btn-back-black',
-        name: 'Rating System UI similar to Udemy',
-        description: 'Craeted a ui for rating system similar to Udemy. I have used React and Tailwind Css for ui.',
-        link: 'https://rating.mjcodes.dev/',
-    },
-    {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
         name: 'AI Summarizer Application',
         description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/mritunjayupadhyay/summary-app',
+        link: 'https://summarize.mjcodes.dev/',
     },
     {
         iconUrl: onlineExam,
@@ -210,10 +210,10 @@ export const projects = [
         link: 'https://github.com/mritunjayupadhyay/school-management-api-v2/tree/develop',
     },
     {
-        iconUrl: traveler,
-        theme: 'btn-back-blue',
-        name: 'NearBy',
-        description: 'A traveling assistent to help you with near by attractions, restaurants (In progress).',
-        link: 'https://github.com/mritunjayupadhyay/halftraveller',
-    }
+        iconUrl: udemy,
+        theme: 'btn-back-black',
+        name: 'Rating System UI similar to Udemy',
+        description: 'Craeted a ui for rating system similar to Udemy. I have used React and Tailwind Css for ui.',
+        link: 'https://rating.mjcodes.dev/',
+    },
 ];
